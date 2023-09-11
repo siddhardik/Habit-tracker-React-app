@@ -7,7 +7,7 @@
 
 a {
   text-decoration: none;
-  color: white;
+  color: rgb(216, 57, 57);
 }
 
 a:hover {
@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
-  background: #ffff99;
+  background: #300d8f;
   color: #1f1f14;
   font-size: 1rem;
   font-weight: bold;
