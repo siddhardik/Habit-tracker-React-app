@@ -1,0 +1,309 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+/* Body styles */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffff99;
+  color: #1f1f14;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.center-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 1000px; /* Set the perspective for 3D effects */
+}
+
+.center-image {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s ease; /* Add transition property for transform */
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  perspective: 1000px;
+}
+
+.center-image:hover {
+  transform: rotateY(-30deg) rotateX(-30deg); /* Apply 3D rotation on hover */
+}
+
+#app-title {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  perspective: 1000px; /* Set the perspective for 3D effects */
+}
+
+#app-title:hover {
+  transform: rotateY(10deg) rotateX(-10deg); /* Apply 3D rotation on hover */
+}
+#firstpart {
+  color: #b30000;
+}
+
+#secondpart {
+  font-weight: bold;
+  font-size: 32px;
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+}
+
+#app-title img {
+  margin-right: 10px;
+  height: 50px;
+}
+
+/* Root div styles */
+#root {
+  width: 80%;
+  border: 1px solid #323232;
+}
+
+/* Navbar component styles */
+.navbar {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  padding: 0 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #323232;
+  background-color: #e3b588;
+}
+.navbar img {
+  width: 50px; /* Adjust the width as needed */
+  height: 50px;
+  margin-right: 5px;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.right-nav h5 {
+  color: #dddddd;
+  margin-right: 10px;
+}
+
+.addhabit-btn {
+  cursor: pointer;
+  color: #1f1f14;
+  background-color: #ffcc99;
+  padding: 8px 20px;
+  border-radius: 7px;
+  transition: all 0.3s ease; /* Add transition for smooth effects */
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  perspective: 1000px; /* Set the perspective for 3D effects */
+}
+
+.addhabit-btn:hover {
+  background-color: #ff9933; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+  transform: scale(1.1) rotateY(10deg) rotateX(-10deg); /* Apply 3D and scale transformation on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+}
+
+/* Rest of the CSS styles */
+
+.addhabit-btn i {
+  margin-right: 5px;
+}
+
+/* Modal styles */
+.modal-content {
+  background-color: #ff9933;
+  color: white;
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
+/* Habits component styles */
+.habits {
+  width: 100%;
+}
+
+/* Habit styles */
+.habit {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #323232;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #ff9933;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition properties for background color and transform */
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  perspective: 1000px; /* Set the perspective for 3D effects */
+}
+
+.habit:hover {
+  background-color: #ff8000;
+  transform: rotateY(10deg) rotateX(-10deg); /* Apply 3D rotation on hover */
+}
+
+.habit-left {
+  display: flex;
+  align-items: center;
+}
+
+.habit-left i {
+  color: black;
+  margin-top: -45px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.habit-right {
+  display: flex;
+  align-items: center;
+}
+
+.log-btn {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #ffcc99;
+  padding: 10px;
+  border-radius: 7px;
+  margin-right: 10px;
+  color: black;
+  border: 1px solid #1f1f14;
+  font-weight: normal;
+  transition: all 0.3s ease; /* Add transition for smooth effects */
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  perspective: 1000px; /* Set the perspective for 3D effects */
+}
+
+.log-btn:hover {
+  background-color: #ff9933; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+  transform: scale(1.1) rotateY(10deg) rotateX(-10deg); /* Apply 3D and scale transformation on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+}
+
+.delete-button i {
+  background-color: #ffcc99;
+  border: 1px solid #1f1f14;
+  color: #e65c00;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 7px;
+  transition: color 0.3s ease; /* Add transition for color change on hover */
+}
+
+.delete-button i:hover {
+  color: white; /* Change icon color on hover */
+  transform: scale(1.2); /* Add a scale transformation on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+}
+
+.log-btn i {
+  margin-right: 5px;
+}
+
+/* Rest of the CSS styles */
+
+.log-btn i {
+  margin-right: 5px;
+}
+
+/* Week view container styles */
+.days-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Day view component styles */
+.day-container {
+  height: 100px;
+  width: 150px;
+  background-color: #ffcc99;
+  border-radius: 20px;
+  padding: 5px;
+  border: 1px solid #1f1f14;
+}
+
+.day-container p {
+  color: black;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.circle-icon {
+  font-size: 22px;
+  margin: 5px 11px;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Add transition for color change on hover */
+}
+
+.circle-icon:hover {
+  transform: scale(1.2); /* Add a scale transformation on hover */
+}
+
+.fa-circle-check {
+  color: green;
+}
+
+.fa-circle-xmark {
+  color: #e65c00;
+}
+
+.fa-circle-minus {
+  color: #cccc00;
+}
+
+.active-green {
+  color: #66cc00;
+}
+
+.active-red {
+  color: red;
+}
+
+.active-yellow {
+  color: #ffff1a;
+}
+
+.backtohome {
+  background-color: #b34700;
+  color: white;
+  height: 40px;
+  border-radius: 17px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add transition properties including transform */
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  perspective: 1000px; /* Set the perspective for 3D effects */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+}
+
+.backtohome:hover {
+  background-color: #ff6600;
+  transform: rotateY(10deg) rotateX(-10deg); /* Apply 3D rotation on hover */
+}
